@@ -13,7 +13,7 @@ https://skillhub.cn/
 GitHub 备用安装：
 
 ```bash
-openclaw skills install git:justwe-bot/myfolio-portfolio-agent@v0.1.1
+openclaw skills install git:justwe-bot/myfolio-portfolio-agent@v0.1.2
 ```
 
 开发版：
@@ -41,6 +41,8 @@ Agent Token 只授权管理 MyFolio 持仓记录，不代表真实交易授权�
 - 删除资产
 - 分析当前持仓
 - 读取或生成持仓日报
+
+说明：持仓增删改查和日报接口由 MyFolio Agent API 直接处理；持仓分析接口依赖下游分析服务，若返回 504，应提示用户稍后重试或改用日报。
 
 ## 安全
 

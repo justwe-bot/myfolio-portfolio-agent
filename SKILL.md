@@ -137,5 +137,6 @@ For A-share stock codes, accept user input such as `SH600000`, `600000.SH`, or `
 - `404`: the requested asset or report does not exist.
 - `409`: the asset already exists. Use update instead of add.
 - `429`: report generation or analysis is busy. Wait and retry later.
+- `504` from `/api/AgentPortfolio/analyze`: the downstream analysis service timed out. Do not treat this as a token or Skill installation failure; tell the user that portfolio CRUD and daily reports may still work, then retry later or use the daily report endpoint.
 
 When an API call fails, report the backend message directly and suggest the smallest next action.

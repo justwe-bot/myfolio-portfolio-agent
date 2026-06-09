@@ -15,7 +15,7 @@ The project owner uploads the packaged zip manually.
 Stable release:
 
 ```bash
-openclaw skills install git:justwe-bot/myfolio-portfolio-agent@v0.1.1
+openclaw skills install git:justwe-bot/myfolio-portfolio-agent@v0.1.2
 ```
 
 Development build:
