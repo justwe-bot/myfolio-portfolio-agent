@@ -1,11 +1,13 @@
 ---
 name: myfolio-portfolio-agent
-description: Use this skill when the user wants an AI agent to query, add, update, delete, analyze, or generate reports for portfolio holdings in 自选理财助手（韭菜账本） through its Agent API using a user-provided MYFOLIO_AGENT_TOKEN.
+description: Use this skill when the user wants an AI agent to query, add, update, delete, analyze, or generate reports for portfolio holdings in 自选理财助手（韭菜账本） through its Agent API using a user-provided PORTFOLIO_AGENT_TOKEN.
 ---
 
 # 自选理财助手（韭菜账本）Portfolio Agent
 
 Use this skill to manage a user's portfolio records in 自选理财助手（韭菜账本） through its Agent API.
+
+When referring to the product in user-facing replies, call it 自选理财助手（韭菜账本）. `myfolio-portfolio-agent` is only the historical package slug for installation; do not infer the product name from it.
 
 This skill manages 自选理财助手（韭菜账本） holding records only. It never places real trades, never transfers assets, and never represents brokerage or exchange authorization.
 
@@ -14,13 +16,13 @@ This skill manages 自选理财助手（韭菜账本） holding records only. It
 Read this value from the user's environment or secret settings:
 
 ```text
-MYFOLIO_AGENT_TOKEN=ai_xxx
+PORTFOLIO_AGENT_TOKEN=ai_xxx
 ```
 
-If the user provided a token in the install or configuration prompt, treat that value as `MYFOLIO_AGENT_TOKEN` for this session. If the runtime supports shell environment variables, prefer an exported variable:
+If the user provided a token in the install or configuration prompt, treat that value as `PORTFOLIO_AGENT_TOKEN` for this session. If the runtime supports shell environment variables, prefer an exported variable:
 
 ```bash
-export MYFOLIO_AGENT_TOKEN="ai_xxx"
+export PORTFOLIO_AGENT_TOKEN="ai_xxx"
 ```
 
 The API base URL is built into this skill:
@@ -29,9 +31,7 @@ The API base URL is built into this skill:
 https://funds-api.justaway.cn
 ```
 
-Users only need to provide `MYFOLIO_AGENT_TOKEN`; do not ask them to configure an API base URL.
-
-`MYFOLIO_AGENT_TOKEN` is kept as the legacy environment variable name for compatibility. Treat it as the Agent Token for 自选理财助手（韭菜账本）, not as the product name.
+Users only need to provide `PORTFOLIO_AGENT_TOKEN`; do not ask them to configure an API base URL.
 
 Never ask the user to paste the token into public chat, source code, GitHub issues, logs, or files that may be committed.
 
@@ -40,7 +40,7 @@ Never ask the user to paste the token into public chat, source code, GitHub issu
 All API requests must use:
 
 ```http
-Authorization: Bearer ${MYFOLIO_AGENT_TOKEN}
+Authorization: Bearer ${PORTFOLIO_AGENT_TOKEN}
 ```
 
 Do not send `userId`. The backend derives the user from the Agent Token.
@@ -52,7 +52,7 @@ Cloudflare may block generic automation request fingerprints. Every 自选理财
 ```http
 User-Agent: Apifox/1.0.0 (https://apifox.com)
 Accept: */*
-Authorization: Bearer ${MYFOLIO_AGENT_TOKEN}
+Authorization: Bearer ${PORTFOLIO_AGENT_TOKEN}
 ```
 
 `Host` and `Connection` are normally added by the HTTP client automatically. If the client allows setting them safely, use:
@@ -110,7 +110,7 @@ List holdings:
 GET /api/AgentPortfolio/assets
 User-Agent: Apifox/1.0.0 (https://apifox.com)
 Accept: */*
-Authorization: Bearer ${MYFOLIO_AGENT_TOKEN}
+Authorization: Bearer ${PORTFOLIO_AGENT_TOKEN}
 ```
 
 Equivalent curl:
@@ -119,7 +119,7 @@ Equivalent curl:
 curl -sS \
   -H "User-Agent: Apifox/1.0.0 (https://apifox.com)" \
   -H "Accept: */*" \
-  -H "Authorization: Bearer ${MYFOLIO_AGENT_TOKEN}" \
+  -H "Authorization: Bearer ${PORTFOLIO_AGENT_TOKEN}" \
   "https://funds-api.justaway.cn/api/AgentPortfolio/assets"
 ```
 
@@ -220,7 +220,7 @@ Analyze one saved asset for today's advice:
 GET /api/AgentPortfolio/assetAnalysis/today?assetType=fund&value=000001
 User-Agent: Apifox/1.0.0 (https://apifox.com)
 Accept: */*
-Authorization: Bearer ${MYFOLIO_AGENT_TOKEN}
+Authorization: Bearer ${PORTFOLIO_AGENT_TOKEN}
 ```
 
 Example response fields:

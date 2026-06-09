@@ -1,6 +1,6 @@
 {
   "name": "myfolio-portfolio-agent",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": true,
   "description": "OpenClaw Skill for 自选理财助手（韭菜账本） portfolio management",
   "type": "module",

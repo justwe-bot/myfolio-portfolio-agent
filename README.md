@@ -13,7 +13,7 @@ https://skillhub.cn/
 GitHub 备用安装：
 
 ```bash
-openclaw skills install git:justwe-bot/myfolio-portfolio-agent@v0.1.8
+openclaw skills install git:justwe-bot/myfolio-portfolio-agent@v0.1.9
 ```
 
 开发版：
@@ -27,12 +27,10 @@ openclaw skills install git:justwe-bot/myfolio-portfolio-agent@main
 在自选理财助手（韭菜账本）插件或小程序登录后，进入持仓助手设置，复制 Agent Token。
 
 ```bash
-export MYFOLIO_AGENT_TOKEN="ai_xxx"
+export PORTFOLIO_AGENT_TOKEN="ai_xxx"
 ```
 
 API Base URL 已内置为 `https://funds-api.justaway.cn`，用户不需要配置。
-
-`MYFOLIO_AGENT_TOKEN` 是为了兼容旧版本保留的环境变量名，实际代表自选理财助手（韭菜账本）的 Agent Token。
 
 Agent Token 只授权管理自选理财助手（韭菜账本）持仓记录，不代表真实交易授权。
 

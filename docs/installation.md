@@ -15,7 +15,7 @@ The project owner uploads the packaged zip manually.
 Stable release:
 
 ```bash
-openclaw skills install git:justwe-bot/myfolio-portfolio-agent@v0.1.8
+openclaw skills install git:justwe-bot/myfolio-portfolio-agent@v0.1.9
 ```
 
 Development build:
@@ -29,12 +29,10 @@ openclaw skills install git:justwe-bot/myfolio-portfolio-agent@main
 Copy the Agent Token from the logged-in 自选理财助手（韭菜账本） plugin or mini program portfolio assistant settings.
 
 ```bash
-export MYFOLIO_AGENT_TOKEN="ai_xxx"
+export PORTFOLIO_AGENT_TOKEN="ai_xxx"
 ```
 
 The API base URL is built into the skill as `https://funds-api.justaway.cn`; users do not need to set it.
-
-`MYFOLIO_AGENT_TOKEN` is retained as the legacy environment variable name for compatibility. It is the Agent Token for 自选理财助手（韭菜账本）.
 
 ## Updates
 
