@@ -11,14 +11,13 @@ This skill manages MyFolio holding records only. It never places real trades, ne
 
 ## Required Configuration
 
-Read these values from the user's environment or secret settings:
+Read this value from the user's environment or secret settings:
 
 ```text
 MYFOLIO_AGENT_TOKEN=ai_xxx
-MYFOLIO_API_BASE_URL=https://funds-api.justaway.cn
 ```
 
-If `MYFOLIO_API_BASE_URL` is missing, use `https://funds-api.justaway.cn`.
+Use `https://funds-api.justaway.cn` as the default API base URL. `MYFOLIO_API_BASE_URL` is optional and should only override the default when the user explicitly provides it.
 
 Never ask the user to paste the token into public chat, source code, GitHub issues, logs, or files that may be committed.
 
@@ -45,8 +44,10 @@ Do not send `userId`. The backend derives the user from the Agent Token.
 Base URL:
 
 ```text
-${MYFOLIO_API_BASE_URL}
+https://funds-api.justaway.cn
 ```
+
+If the user explicitly provides `MYFOLIO_API_BASE_URL`, use that value instead.
 
 List holdings:
 
