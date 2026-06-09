@@ -15,7 +15,7 @@ The project owner uploads the packaged zip manually.
 Stable release:
 
 ```bash
-openclaw skills install git:justwe-bot/myfolio-portfolio-agent@v0.1.0
+openclaw skills install git:justwe-bot/myfolio-portfolio-agent@v0.1.1
 ```
 
 Development build:
@@ -30,4 +30,5 @@ Copy the Agent Token from the logged-in MyFolio plugin or mini program AI access
 
 ```bash
 export MYFOLIO_AGENT_TOKEN="ai_xxx"
+export MYFOLIO_API_BASE_URL="https://funds-api.justaway.cn"
 ```

@@ -15,10 +15,10 @@ Read these values from the user's environment or secret settings:
 
 ```text
 MYFOLIO_AGENT_TOKEN=ai_xxx
-MYFOLIO_API_BASE_URL=https://api.myfolio.uk
+MYFOLIO_API_BASE_URL=https://funds-api.justaway.cn
 ```
 
-If `MYFOLIO_API_BASE_URL` is missing, use `https://api.myfolio.uk`.
+If `MYFOLIO_API_BASE_URL` is missing, use `https://funds-api.justaway.cn`.
 
 Never ask the user to paste the token into public chat, source code, GitHub issues, logs, or files that may be committed.
 
