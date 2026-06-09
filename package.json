@@ -1,8 +1,8 @@
 {
   "name": "myfolio-portfolio-agent",
-  "version": "0.1.4",
+  "version": "0.1.8",
   "private": true,
-  "description": "OpenClaw Skill for MyFolio portfolio management",
+  "description": "OpenClaw Skill for 自选理财助手（韭菜账本） portfolio management",
   "type": "module",
   "scripts": {
     "package": "node scripts/package.mjs"

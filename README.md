@@ -1,6 +1,6 @@
-# MyFolio Portfolio Agent
+# 自选理财助手（韭菜账本）Portfolio Agent
 
-OpenClaw Skill for managing MyFolio portfolio records through the MyFolio Agent API.
+OpenClaw Skill for managing portfolio records in 自选理财助手（韭菜账本） through its Agent API.
 
 ## 安装
 
@@ -13,7 +13,7 @@ https://skillhub.cn/
 GitHub 备用安装：
 
 ```bash
-openclaw skills install git:justwe-bot/myfolio-portfolio-agent@v0.1.4
+openclaw skills install git:justwe-bot/myfolio-portfolio-agent@v0.1.8
 ```
 
 开发版：
@@ -24,7 +24,7 @@ openclaw skills install git:justwe-bot/myfolio-portfolio-agent@main
 
 ## 配置
 
-在 MyFolio 插件或小程序登录后，进入持仓助手设置，复制 Agent Token。
+在自选理财助手（韭菜账本）插件或小程序登录后，进入持仓助手设置，复制 Agent Token。
 
 ```bash
 export MYFOLIO_AGENT_TOKEN="ai_xxx"
@@ -32,7 +32,9 @@ export MYFOLIO_AGENT_TOKEN="ai_xxx"
 
 API Base URL 已内置为 `https://funds-api.justaway.cn`，用户不需要配置。
 
-Agent Token 只授权管理 MyFolio 持仓记录，不代表真实交易授权。
+`MYFOLIO_AGENT_TOKEN` 是为了兼容旧版本保留的环境变量名，实际代表自选理财助手（韭菜账本）的 Agent Token。
+
+Agent Token 只授权管理自选理财助手（韭菜账本）持仓记录，不代表真实交易授权。
 
 ## 更新
 
@@ -47,20 +49,24 @@ skillhub install myfolio-portfolio-agent
 ## 能力
 
 - 查询当前持仓
+- 搜索基金、股票、虚拟币、黄金候选资产
+- 查询基金、股票、虚拟币、黄金参考价格
+- 根据截图识别出的名称、金额、收益生成待确认补录建议
 - 新增资产
 - 修改成本价和持有数量
 - 删除资产
+- 查看某个已保存资产今天的分析和操作建议
 - 分析当前持仓
 - 读取或生成持仓日报
 
-说明：持仓增删改查和日报接口由 MyFolio Agent API 直接处理；持仓分析接口依赖下游分析服务，若返回 504，应提示用户稍后重试或改用日报。
+说明：持仓增删改查和日报接口由自选理财助手（韭菜账本）Agent API 直接处理；持仓分析接口依赖下游分析服务，若返回 504，应提示用户稍后重试或改用日报。
 
 ## 安全
 
 - 不要把 Agent Token 提交到 GitHub
 - 不要把 Agent Token 发给不可信的人或服务
 - 删除资产前，AI 必须复述资产类型、代码、名称并要求确认
-- 如果 token 泄露，在 MyFolio 插件或小程序设置中立即重置
+- 如果 token 泄露，在自选理财助手（韭菜账本）插件或小程序设置中立即重置
 
 ## 发布
 

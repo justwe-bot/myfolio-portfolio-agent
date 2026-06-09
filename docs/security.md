@@ -1,6 +1,6 @@
 # Security
 
-The Agent Token maps API calls to the logged-in MyFolio user who generated it.
+The Agent Token maps API calls to the logged-in 自选理财助手（韭菜账本） user who generated it.
 
 Rules:
 
@@ -11,4 +11,4 @@ Rules:
 - Treat all write actions as portfolio-record changes only, not financial trades.
 - Confirm destructive actions before calling the delete API.
 
-The MyFolio backend never accepts `userId` from Agent API calls. User identity is derived from the token.
+The 自选理财助手（韭菜账本） backend never accepts `userId` from Agent API calls. User identity is derived from the token.
