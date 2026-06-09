@@ -13,7 +13,7 @@ https://skillhub.cn/
 GitHub 备用安装：
 
 ```bash
-openclaw skills install git:justwe-bot/myfolio-portfolio-agent@v0.1.3
+openclaw skills install git:justwe-bot/myfolio-portfolio-agent@v0.1.4
 ```
 
 开发版：
@@ -30,9 +30,19 @@ openclaw skills install git:justwe-bot/myfolio-portfolio-agent@main
 export MYFOLIO_AGENT_TOKEN="ai_xxx"
 ```
 
-API Base URL 已内置为 `https://funds-api.justaway.cn`，一般不需要配置。
+API Base URL 已内置为 `https://funds-api.justaway.cn`，用户不需要配置。
 
 Agent Token 只授权管理 MyFolio 持仓记录，不代表真实交易授权。
+
+## 更新
+
+无需单独的检查更新接口。重新执行安装命令即可确认或覆盖到当前发布版本：
+
+```bash
+skillhub install myfolio-portfolio-agent
+```
+
+如果使用 GitHub 备用安装，则改用最新 tag 的安装命令。
 
 ## 能力
 

@@ -1,6 +1,6 @@
 {
   "name": "myfolio-portfolio-agent",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": true,
   "description": "OpenClaw Skill for MyFolio portfolio management",
   "type": "module",

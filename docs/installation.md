@@ -15,7 +15,7 @@ The project owner uploads the packaged zip manually.
 Stable release:
 
 ```bash
-openclaw skills install git:justwe-bot/myfolio-portfolio-agent@v0.1.3
+openclaw skills install git:justwe-bot/myfolio-portfolio-agent@v0.1.4
 ```
 
 Development build:
@@ -32,4 +32,12 @@ Copy the Agent Token from the logged-in MyFolio plugin or mini program portfolio
 export MYFOLIO_AGENT_TOKEN="ai_xxx"
 ```
 
-The API base URL defaults to `https://funds-api.justaway.cn`; users normally do not need to set it.
+The API base URL is built into the skill as `https://funds-api.justaway.cn`; users do not need to set it.
+
+## Updates
+
+There is no separate MyFolio API endpoint for checking skill updates. Re-run the install command to confirm or overwrite the installed skill:
+
+```bash
+skillhub install myfolio-portfolio-agent
+```

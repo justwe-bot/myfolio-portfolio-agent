@@ -17,7 +17,13 @@ Read this value from the user's environment or secret settings:
 MYFOLIO_AGENT_TOKEN=ai_xxx
 ```
 
-Use `https://funds-api.justaway.cn` as the default API base URL. `MYFOLIO_API_BASE_URL` is optional and should only override the default when the user explicitly provides it.
+The API base URL is built into this skill:
+
+```text
+https://funds-api.justaway.cn
+```
+
+Users only need to provide `MYFOLIO_AGENT_TOKEN`; do not ask them to configure an API base URL.
 
 Never ask the user to paste the token into public chat, source code, GitHub issues, logs, or files that may be committed.
 
@@ -46,8 +52,6 @@ Base URL:
 ```text
 https://funds-api.justaway.cn
 ```
-
-If the user explicitly provides `MYFOLIO_API_BASE_URL`, use that value instead.
 
 List holdings:
 
